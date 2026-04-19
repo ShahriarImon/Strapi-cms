@@ -11,9 +11,12 @@ const config = ({
         api_key: env("CLOUDINARY_KEY"),
         api_secret: env("CLOUDINARY_SECRET"),
       },
-      actionOptions: {
-        upload: {},
-        delete: {},
+       actionOptions: {
+        upload: {
+          folder: 'strapi',
+          use_filename: true,
+          unique_filename: true,
+        },
       },
     },
   },
